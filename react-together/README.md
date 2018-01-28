@@ -15,5 +15,8 @@ A react app that allows you to watch videos (YouTube) together
 ### Messenger
 - [ ][react-native-gifted-chat](https://github.com/FaridSafi/react-native-gifted-chat)
 
+### Host Server
+- [ ][react-native-firebase](https://github.com/invertase/react-native-firebase)
+
 ### Real-time sockets
 - [ ][react-pubnub](https://github.com/pubnub/react)

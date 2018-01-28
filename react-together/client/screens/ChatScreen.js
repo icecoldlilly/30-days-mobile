@@ -1,6 +1,12 @@
+import React, { Component } from 'react';
+import { StyleSheet, Text, View} from 'react-native';
+import { Button } from 'react-native-elements';
 import { GiftedChat } from 'react-native-gifted-chat'
 
-class ChatComponent extends React.Component {
+export default class ChatScreen extends Component {
+  static navigationOptions = ({navigation}) => ({
+    title: 'Messenger',
+  });
   state = {
     messages: [],
   }
@@ -29,6 +35,7 @@ class ChatComponent extends React.Component {
   }
 
   render() {
+    const { goBack } = this.props.navigation;
     return (
       <GiftedChat
         messages={this.state.messages}

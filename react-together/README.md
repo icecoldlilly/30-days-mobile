@@ -9,7 +9,6 @@ A react app that allows you to watch videos (YouTube) together
 1.  Supports captions (finally can watch KDrama!)
 
 ### 🏗 Built on...
-
 - Base
     - [crna](<https://github.com/react-community/create-react-native-app>)
     - [react-navigator](<https://github.com/react-navigation/react-navigation>)

@@ -8,6 +8,7 @@ A react app that allows you to watch videos (YouTube) together
 
 ### Base
 - [ ][CRNA](https://github.com/react-community/create-react-native-app)
+- [ ][react-navigator](https://github.com/react-navigation/react-navigation)
 
 ### YouTube
 - [ ][react-native-youtube] (https://github.com/inProgress-team/react-native-youtube)

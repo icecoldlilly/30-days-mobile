@@ -12,7 +12,8 @@ A react app that allows you to watch videos (YouTube) together
 - Base
     - [crna](<https://github.com/react-community/create-react-native-app>)
     - [react-navigator](<https://github.com/react-navigation/react-navigation>)
-    - [react-native-elements](<https://github.com/react-native-training/react-native-elements>)
+    - ~~[react-native-elements](<https://github.com/react-native-training/react-native-elements>)~~
+    - [nativebase](<https://github.com/GeekyAnts/NativeBase>)
 - YouTube
     - [react-native-youtube](<https://github.com/inProgress-team/react-native-youtube>)
 - Messenger

@@ -26,12 +26,12 @@ A react app that allows you to watch videos (YouTube) together
 
 ## Day 1
 
-1.  Setup base
-2.  Add simple buttons
-3.  Choose React Native UI Kit
+1.  ~~Setup base~~
+2.  ~~Add simple buttons~~
+3.  ~~Choose React Native UI Kit~~
 
 ## Day 2
 
-1. Add Chat Component
+1. ~~Add Chat Component~~
 2. Add YouTube Component
 3. Add Authentication page

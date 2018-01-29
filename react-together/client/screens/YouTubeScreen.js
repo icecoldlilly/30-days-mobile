@@ -2,22 +2,20 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View} from 'react-native';
 import { Button } from 'react-native-elements';
 
-export default class MainScreen extends Component {
+export default class YouTubeScreen extends Component {
   static navigationOptions = {
-    title: 'Together',
-    // This removes back button title
-    headerBackTitle: null,
+    title: 'YouTube',
   };
   render() {
-    const { navigate } = this.props.navigation;
+    const { goBack } = this.props.navigation;
     return (
       <View style={styles.container}>
-        <Button text='Messenger  💬' onPress={() => navigate('Messneger')} />
-        <Button text='YouTube  📺' onPress={() => navigate('YouTube')} />
+        <Text> YouTube Screen will be here </Text>
       </View>
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View} from 'react-native';
-import { Button } from 'react-native-elements';
+import { Button, Icon } from 'react-native-elements';
 
 export default class MainScreen extends Component {
   static navigationOptions = {
@@ -12,7 +12,9 @@ export default class MainScreen extends Component {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-        <Button text='Messenger  💬' onPress={() => navigate('Messneger')} />
+        <Button 
+        text='Messenger 💬'
+        onPress={() => navigate('Messneger')} />
         <Button text='YouTube  📺' onPress={() => navigate('YouTube')} />
       </View>
     );
@@ -23,7 +25,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    paddingTop: 20,
   },
 });

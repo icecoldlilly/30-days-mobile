@@ -16,6 +16,7 @@ A react app that allows you to watch videos (YouTube) together
     ~~- [native-base](<https://github.com/GeekyAnts/NativeBase>)~~
 - YouTube
     - [react-native-youtube](<https://github.com/inProgress-team/react-native-youtube>)
+    - [google-auth-library, googleapis](https://github.com/google/google-api-nodejs-client/tree/master/samples/youtube)
 - Messenger
     - [react-native-gifted-chat](<https://github.com/FaridSafi/react-native-gifted-chat>)
 - Host Server

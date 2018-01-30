@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { StackNavigator } from 'react-navigation';
 import MainScreen from './screens/MainScreen';
-import ChatScreen from './screens/ChatScreen';
+import MessengerScreen from './screens/MessengerScreen';
 import YouTubeScreen  from './screens/YouTubeScreen';
 
 export const AppNavigator = StackNavigator({
   Main: {screen: MainScreen},
-  Messneger: {screen: ChatScreen},
+  Messneger: {screen: MessengerScreen},
   YouTube: {screen: YouTubeScreen},
 });
 

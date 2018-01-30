@@ -40,8 +40,11 @@ A react app that allows you to watch videos (YouTube) together
     - ~~Add YouTube API~~
         - Borrowed Node.js implementation for google-auth-library, googleapis
 
-
 ## Day 3
+1. Refactor Screens into Components
+    - Created Messenger components: List & Message
+    - Created YouTube components: List & Player
+## Day 4
 1. Add YouTube Component
     - Build a list of videos
     - Play videos out of list using react-native-youtube

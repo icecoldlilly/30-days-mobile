@@ -1,26 +1,25 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { GiftedChat } from 'react-native-gifted-chat'
 
 export default class MessageUI extends Component {
-  state = {
+
+
+  /**
+   *   state = {
     messages: [],
+  }
+  
+   */
+  constructor(props) {
+    super(props);
+    this._messages = props.messages
   }
 
   componentWillMount() {
     this.setState({
-      messages: [
-        {
-          _id: 1,
-          text: 'Hello developer',
-          createdAt: new Date(),
-          user: {
-            _id: 2,
-            name: 'React Native',
-            avatar: 'https://facebook.github.io/react/img/logo_og.png',
-          },
-        },
-      ],
+      messages: this._messages
     })
   }
 

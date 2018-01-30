@@ -7,12 +7,23 @@ export default class MessengerScreen extends Component {
     title: 'Messenger',
   });
   state = {
-    messages: [],
+    messages: [
+      {
+        _id: 1,
+        text: 'What\'s good bro?',
+        createdAt: new Date(),
+        user: {
+          _id: 2,
+          name: 'React Native',
+          avatar: 'https://facebook.github.io/react/img/logo_og.png',
+        },
+      },
+    ],
   }
   render() {
     const { goBack } = this.props.navigation;
     return (
-      <MessageUI />
+      <MessageUI messages={this.state.messages}/>
     )
   }
 }

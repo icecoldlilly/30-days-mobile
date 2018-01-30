@@ -41,13 +41,19 @@ A react app that allows you to watch videos (YouTube) together
         - Borrowed Node.js implementation for google-auth-library, googleapis
 
 ## Day 3
+
 1. Refactor Screens into Components
     - Created Messenger components: Contacts & Message
-        - ~~Pass data as props to components from screen~~
-        - Create list component
+        - ~~Scaffold a simple Message component using Gifted-Chat~~
+        - ~~Pass data as props to Message component from screen~~
+        - Scaffold a contact list component
     - Created YouTube components: List & Player
+        - ~~Scaffold a simple YouTube player component using [WebView](<https://reactnativecode.com/embed-youtube-video-example/>)~~
+        - ~~Pass data as props to YouTube player component from screen~~
 ## Day 4
-1. Add YouTube Component
-    - Build a list of videos
-    - Play videos out of list using react-native-youtube
-2. Add Authentication page
+
+1. Complete scaffolding YouTube Component
+    - Scaffold a video list component
+    - Make YouTubeScreen handle delegation between video list and player
+2. Scaffold Authentication Screen
+3. Scaffold Settings Screen

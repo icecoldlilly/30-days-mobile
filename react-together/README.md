@@ -34,8 +34,13 @@ A react app that allows you to watch videos (YouTube) together
 ## Day 2
 
 1. ~~Add Chat Component~~
-2. Add YouTube Component
-    - Add YouTube API
+2. ~~Style button components~~
+3. Add YouTube Component
+    - ~~Add YouTube API~~
+
+
+## Day 3
+1. Add YouTube Component
     - Build a list of videos
     - Play videos out of list using react-native-youtube
-3. Add Authentication page
+2. Add Authentication page

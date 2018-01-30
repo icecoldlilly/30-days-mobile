@@ -2,4 +2,5 @@
 A 30 day challanege Mainly concentrated on React Native apps.
 
 - [Day 1 -- React together](react-together/README.md#day-1)
-- [Day 2 -- React together / YouTube client](react-together/README.md#day-2)
+- [Day 2 -- React together / basic YouTube API](react-together/README.md#day-2)
+- [Day 3 -- React together / basic YouTube client](react-together/README.md#day-3)

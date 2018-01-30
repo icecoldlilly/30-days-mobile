@@ -38,6 +38,7 @@ A react app that allows you to watch videos (YouTube) together
     - Faced a [problem](<https://github.com/react-native-training/react-native-elements/issues/868>) with icons in buttons
 3. Add YouTube Component
     - ~~Add YouTube API~~
+        - Borrowed Node.js implementation for google-auth-library, googleapis
 
 
 ## Day 3

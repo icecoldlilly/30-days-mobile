@@ -11,7 +11,6 @@ export default class YouTubeScreen extends Component {
     const { goBack } = this.props.navigation;
     return (
       <View style={styles.container}>
-        {/* <Text> YouTube Screen will be here </Text> */}
         <PlayerUI playThis="KVZ-P-ZI6W4"/>
       </View>
     );

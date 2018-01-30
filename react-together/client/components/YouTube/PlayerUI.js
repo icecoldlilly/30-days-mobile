@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import YouTube from 'react-native-youtube';
+import { StyleSheet, Text, View, WebView, Platform } from 'react-native';
+// import YouTube from 'react-native-youtube';
 
 /* 
   TODO: ✍🏽 Add video player here
@@ -15,25 +15,28 @@ export default class PlayerUI extends Component {
 
   componentWillMount() {
     this.setState({
-      video: this.playThis
+      videoId: this.playThis
     })
   }
 
   render(){
+    console.log(`Play video: ${this.state.videoId}`);
     return (
-      <YouTube
-        videoId={this.state.video}   // The YouTube video ID
-        play={true}             // control playback of video with true/false
-        fullscreen={true}       // control whether the video should play in fullscreen or inline
-        loop={true}             // control whether the video should loop when ended
-
-        onReady={e => this.setState({ isReady: true })}
-        onChangeState={e => this.setState({ status: e.state })}
-        onChangeQuality={e => this.setState({ quality: e.quality })}
-        onError={e => this.setState({ error: e.error })}
-
-        style={{ alignSelf: 'stretch', height: 300 }}
-      />
+      
+      // Use WebView
+      <View style={{ height: 300 }}>
+        <WebView
+                style={ styles.WebViewContainer }
+                javaScriptEnabled={true}
+                domStorageEnabled={true}
+                source={{uri: `https://www.youtube.com/embed/${this.state.videoId}` }}
+        />
+      </View>
     );
   }
 }
+const styles = StyleSheet.create({
+  WebViewContainer: {
+    marginTop: (Platform.OS == 'ios') ? 20 : 0,
+  }
+});

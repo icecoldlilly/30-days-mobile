@@ -37,6 +37,6 @@ export default class PlayerUI extends Component {
 }
 const styles = StyleSheet.create({
   WebViewContainer: {
-    marginTop: (Platform.OS == 'ios') ? 20 : 0,
+    marginTop: (Platform.OS == 'ios') ? 0 : 0,
   }
 });

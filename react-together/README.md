@@ -35,6 +35,7 @@ A react app that allows you to watch videos (YouTube) together
 
 1. ~~Add Chat Component~~
 2. ~~Style button components~~
+    - Faced a [problem](<https://github.com/react-native-training/react-native-elements/issues/868>) with icons in buttons
 3. Add YouTube Component
     - ~~Add YouTube API~~
 

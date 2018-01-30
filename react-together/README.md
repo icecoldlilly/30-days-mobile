@@ -14,6 +14,7 @@ A react app that allows you to watch videos (YouTube) together
     - [react-navigator](<https://github.com/react-navigation/react-navigation>)
     - [react-native-elements](<https://github.com/react-native-training/react-native-elements>)
     ~~- [native-base](<https://github.com/GeekyAnts/NativeBase>)~~
+    - [react-native-dotenv](<https://github.com/zetachang/react-native-dotenv>)
 - YouTube
     - [react-native-youtube](<https://github.com/inProgress-team/react-native-youtube>)
     - [google-auth-library, googleapis](https://github.com/google/google-api-nodejs-client/tree/master/samples/youtube)
@@ -42,14 +43,15 @@ A react app that allows you to watch videos (YouTube) together
 
 ## Day 3
 
-1. Refactor Screens into Components
-    - Created Messenger components: Contacts & Message
+1. ~~Refactor Screens into Components~~
+2. Created Messenger components: Contacts & Message
         - ~~Scaffold a simple Message component using Gifted-Chat~~
         - ~~Pass data as props to Message component from screen~~
         - Scaffold a contact list component
-    - Created YouTube components: List & Player
+3. Created YouTube components: List & Player
         - ~~Scaffold a simple YouTube player component using [WebView](<https://reactnativecode.com/embed-youtube-video-example/>)~~
         - ~~Pass data as props to YouTube player component from screen~~
+4. Added API keys into .env using 'react-native-dotenv'
 ## Day 4
 
 1. Complete scaffolding YouTube Component

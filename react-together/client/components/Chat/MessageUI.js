@@ -6,11 +6,8 @@ import { GiftedChat } from 'react-native-gifted-chat'
 export default class MessageUI extends Component {
 
 
-  /**
-   *   state = {
-    messages: [],
-  }
-  
+  /* 
+  TODO: ✍🏽 Add special messenger features here
    */
   constructor(props) {
     super(props);

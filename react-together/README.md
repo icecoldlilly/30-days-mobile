@@ -42,7 +42,9 @@ A react app that allows you to watch videos (YouTube) together
 
 ## Day 3
 1. Refactor Screens into Components
-    - Created Messenger components: List & Message
+    - Created Messenger components: Contacts & Message
+        - ~~Pass data as props to components from screen~~
+        - Create list component
     - Created YouTube components: List & Player
 ## Day 4
 1. Add YouTube Component

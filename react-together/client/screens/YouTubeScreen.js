@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View} from 'react-native';
 import { Button } from 'react-native-elements';
+import PlayerUI from '../components/YouTube/PlayerUI';
 
 export default class YouTubeScreen extends Component {
   static navigationOptions = {
@@ -10,7 +11,8 @@ export default class YouTubeScreen extends Component {
     const { goBack } = this.props.navigation;
     return (
       <View style={styles.container}>
-        <Text> YouTube Screen will be here </Text>
+        {/* <Text> YouTube Screen will be here </Text> */}
+        <PlayerUI playThis="KVZ-P-ZI6W4"/>
       </View>
     );
   }

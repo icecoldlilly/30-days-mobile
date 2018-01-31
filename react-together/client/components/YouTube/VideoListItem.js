@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {   Image, View, Text, TouchableOpacity, } from 'react-native';
-import styles from '../../styles/YouTube/ListItemStyle.js'
+import styles from './styles/YouTube/VideoListItem.style.js'
 
 const VideoListItem = ({item, onVideoSelect}) => {
   return (

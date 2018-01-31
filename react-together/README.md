@@ -62,5 +62,9 @@ A react app that allows you to watch videos (YouTube) together
         - ~~Insert list UI and search bar into YouTubeScreen~~
         - ~~Build Modal navigation from VideoListUI to PlayerUI~~
         - Accept params from YouTubeScreen when Navigating to PlayerUI
+    - **Styling Note**
+        1. Place components inside viewports (<View>)
+        2. Set flex ratio based on desired size (bigger component has higher number, i.e 'flex:5' and 'flex:1')
+        3. Make sure there's no 'justifyContent' or 'alignItems' set for the viewports
 2. Scaffold Authentication Screen
 3. Scaffold Settings Screen

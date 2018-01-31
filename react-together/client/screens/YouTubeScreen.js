@@ -38,12 +38,14 @@ export class YouTubeScreen extends Component {
     return (
       <View style={ styles.container }>
       {/* // <View style={ {flex: 1} }> */}
-
+      <View style={{ flex: 1 }}>
         <SearchBar 
           style={styles.searchBar}
           // style={{flex: 1}}
           onSubmit={this._searchData.bind(this)}
         />
+      </View>
+      <View style={{ flex: 5}}>
 
         {/* <PlayerUI video={this.state.selectedVideo} loading={this.state.loading}/> */}
 
@@ -66,8 +68,8 @@ export class YouTubeScreen extends Component {
         />
         {/* TODO: ✍🏽 Add a loader element */}
         {/* <Loader visible={this.state.loading} /> */}
-
       </View>
+    </View>
     )
   }
 
@@ -85,20 +87,6 @@ export class YouTubeScreen extends Component {
   }
 }
 
-
-// export default class YouTubeScreen extends Component {
-//   static navigationOptions = {
-//     title: 'YouTube',
-//   };
-//   render() {
-//     const { goBack } = this.props.navigation;
-//     return (
-//       <View style={styles.container}>
-//         <PlayerUI playThis="KVZ-P-ZI6W4"/>
-//       </View>
-//     );
-//   }
-// }
 export default YouTubeNavigator = StackNavigator(
   {
     YouTubeScreen: { screen: YouTubeScreen },
@@ -113,15 +101,10 @@ export default YouTubeNavigator = StackNavigator(
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
   },
   videoList: {
-    flex:5,
+    flex:1,
     justifyContent: 'center',
     alignItems: 'center'
   },
-  searchBar: {
-
-  }
 });

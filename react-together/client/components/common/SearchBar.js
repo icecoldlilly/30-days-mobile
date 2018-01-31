@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, TextInput,} from 'react-native';
 
-import styles from './../Styles/searchBar.style'
+import styles from './styles/SearchBar.style'
 
 export default class SearchBar extends Component {
    constructor(props) {

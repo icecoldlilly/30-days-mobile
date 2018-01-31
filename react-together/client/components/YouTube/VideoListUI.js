@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 /* 
   TODO: ✍🏽 Add video list here
    */
-  import VideoListItem from './ListItemView'; 
+  import VideoListItem from './VideoListItem'; 
   const VideoListUI = ({items, onVideoSelect}) => {
      renderRow = (video, sId, rId) => {
        return (

@@ -34,28 +34,34 @@ export default class PlayerUI extends Component {
       
       // Use WebView
       <View style={styles.container}>
-        <View style={{ height: 300 }}>
+        {/* <View style={{ height: 300 }}> */}
           <WebView
                   style={ styles.WebViewContainer }
                   javaScriptEnabled={true}
                   domStorageEnabled={true}
                   source={{uri: `https://www.youtube.com/embed/${this.props.video.id.videoId}` }}
           />
-        </View>
-          <Button style={{ marginTop: '10%' }}
+        {/* </View> */}
+          {/* <Button style={{ marginTop: '10%' }}
           large
           text='Watch Together'
           icon={ <Icon name="plus-square" color="white" type="font-awesome" /> }
           buttonStyle={{backgroundColor: '#fc8027', borderRadius: 10}}
           textStyle={{textAlign: 'center'}}
-          onPress={() => navigate('YouTube')} />
+          onPress={() => navigate('YouTube')} /> */}
       </View>
     );
   }
 }
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
+    padding: 2,
+    flex: 3,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+    flexDirection: 'row'
   },
   WebViewContainer: {
     marginTop: (Platform.OS == 'ios') ? 0 : 0, 

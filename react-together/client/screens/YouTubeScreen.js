@@ -22,7 +22,7 @@ export default class YouTubeScreen extends Component {
   }
 
   componentDidMount() {
-    this._searchData.call(this, 'React Native');
+    this._searchData.call(this, 'Nipsey Hussle');
   }
 
   render() {
@@ -82,8 +82,8 @@ export default class YouTubeScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center'
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   videoList: {
     justifyContent: 'center',

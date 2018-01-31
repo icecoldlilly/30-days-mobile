@@ -23,7 +23,6 @@ export class YouTubeScreen extends Component {
     this.state = {
       loading: false,
       videos: dataSource,
-      // selectedVideo: ''
     };
   }
 
@@ -51,16 +50,15 @@ export class YouTubeScreen extends Component {
 
         <VideoListUI
           style={ styles.videoList }
-          // style={ {flex: 5} }
           items={ this.state.videos }
           onVideoSelect={
             selectedVideo => {
-              // Don't select re-set state
-              // this.setState({selectedVideo});
-              // ** Modal ** Navigate instead
-              console.log(`Navigating to ${this.state.selectedVideo.snippet.title}`)
+              // Don't need to update state with selected video as done below
+              // this.setState(selectedVideo)
+              // Because selecte video is passed as param to the PlayerUI
+              console.log(`Navigating to ${selectedVideo.snippet.title}`)
               navigate('PlayerUI',{
-                video: this.state.selectedVideo,
+                video: selectedVideo,
                 loading: this.state.loading
               })
             } 
@@ -80,7 +78,6 @@ export class YouTubeScreen extends Component {
     .then(data => {
       this.setState({
         videos: this.state.videos.cloneWithRows(data.items),
-        selectedVideo: data.items[0],
         loading: false
       });
     });

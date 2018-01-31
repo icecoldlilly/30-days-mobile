@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, WebView, Platform } from 'react-native';
+import { StyleSheet, Text, View, WebView, Platform, ActivityIndicator } from 'react-native';
 import { Button, Icon } from 'react-native-elements';
 
 // import YouTube from 'react-native-youtube';
@@ -12,17 +12,24 @@ import { Button, Icon } from 'react-native-elements';
 export default class PlayerUI extends Component {
   constructor(props) {
     super(props);
-    this.playThis = props.playThis
+    this.state = {
+      isReady: false,
+      status: null,
+      quality: null,
+      error: null,
+      isPlaying: false
+    }
   }
 
   componentWillMount() {
     this.setState({
-      videoId: this.playThis
+      // videoId: this.playThis
     })
   }
 
   render(){
     console.log(`Play video: ${this.state.videoId}`);
+    if(!this.props.video || this.props.loading) return <ActivityIndicator size={'large'} style={styles.indicator}/>
     return (
       
       // Use WebView
@@ -32,7 +39,7 @@ export default class PlayerUI extends Component {
                   style={ styles.WebViewContainer }
                   javaScriptEnabled={true}
                   domStorageEnabled={true}
-                  source={{uri: `https://www.youtube.com/embed/${this.state.videoId}` }}
+                  source={{uri: `https://www.youtube.com/embed/${this.props.video.id.videoId}` }}
           />
         </View>
           <Button style={{ marginTop: '10%' }}
@@ -51,7 +58,11 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   WebViewContainer: {
-    marginTop: (Platform.OS == 'ios') ? 0 : 0,
-    
-  }
+    marginTop: (Platform.OS == 'ios') ? 0 : 0, 
+  },
+  indicator: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 3,
+  },
 });

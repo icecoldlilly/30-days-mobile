@@ -33,9 +33,9 @@ export default class YouTubeScreen extends Component {
 
         <SearchBar onSubmit={this._searchData.bind(this)}/>
 
-        <VideoDetail video={this.state.selectedVideo} loading={this.state.loading}/>
+        <PlayerUI video={this.state.selectedVideo} loading={this.state.loading}/>
 
-        <VideoList
+        <VideoListUI
           style={ styles.videoList }
           items={ this.state.videos }
           onVideoSelect={ selectedVideo => {
@@ -43,7 +43,7 @@ export default class YouTubeScreen extends Component {
           } }
         />
 
-        <Loader visible={this.state.loading} />
+        {/* <Loader visible={this.state.loading} /> */}
 
       </View>
     )
@@ -82,5 +82,11 @@ export default class YouTubeScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    // justifyContent: 'center',
+    // alignItems: 'center'
   },
+  videoList: {
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
 });

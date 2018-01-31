@@ -5,11 +5,11 @@ import { StyleSheet, Text, View } from 'react-native';
 /* 
   TODO: ✍🏽 Add video list here
    */
-  import ListItemCard from './ListItemView'; 
+  import VideoListItem from './ListItemView'; 
   const VideoListUI = ({items, onVideoSelect}) => {
      renderRow = (video, sId, rId) => {
        return (
-         <ListItemCard
+         <VideoListItem
            key={ rId }
            item={ video }
            onVideoSelect={ onVideoSelect }

@@ -11,7 +11,7 @@ import { Button, Icon } from 'react-native-elements';
 
 export default class PlayerUI extends Component {
   static navigationOptions = ({ navigation }) => ({
-    title: `${navigation.state.params.video.id.title}`,
+    title: `${navigation.state.params.video.snippet.title}`,
   });
   constructor(props) {
     super(props);
@@ -33,7 +33,7 @@ export default class PlayerUI extends Component {
   }
 
   componentDidMount() {
-    console.log(`Play video: ${this.state.video.id.title}, Loading? ${this.props.loading}`);
+    console.log(`Play video: ${this.state.video.id.videoId}, Loading? ${this.state.loading}`);
   }
 
   render(){

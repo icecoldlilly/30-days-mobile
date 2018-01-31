@@ -27,7 +27,8 @@ export class YouTubeScreen extends Component {
   }
 
   componentDidMount() {
-    this._searchData.call(this, 'Nipsey Hussle');
+    // this._searchData.call(this, 'Nipsey Hussle');
+    this._showFeatured.call(this);
   }
 
   render() {
@@ -70,7 +71,18 @@ export class YouTubeScreen extends Component {
     </View>
     )
   }
+  _showFeatured() {
+    this.setState({loading: true});
 
+    Api.featured()
+    .then(data => {
+      console.log(data)
+      this.setState({
+        videos: this.state.videos.cloneWithRows(data.items),
+        loading: false
+      });
+    });
+  }
   _searchData(query) {
     this.setState({loading: true});
 

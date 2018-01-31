@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {   Image, View, Text, TouchableOpacity, } from 'react-native';
 import styles from '../../styles/YouTube/ListItemStyle.js'
 
-const ListItemCard = ({item, onVideoSelect}) => {
+const VideoListItem = ({item, onVideoSelect}) => {
   return (
     <TouchableOpacity
       style={ styles.container }
@@ -34,4 +34,4 @@ const ListItemCard = ({item, onVideoSelect}) => {
   )
 }
 
-export default ListItemCard;
+export default VideoListItem;

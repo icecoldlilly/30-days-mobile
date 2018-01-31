@@ -1,15 +1,9 @@
-import React from 'react';
-
-import {
-  Image,
-  View,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
-
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import {   Image, View, Text, TouchableOpacity, } from 'react-native';
 import styles from '../../styles/YouTube/ListItemStyle.js'
 
-const VideoListItem = ({item, onVideoSelect}) => {
+const ListItemCard = ({item, onVideoSelect}) => {
   return (
     <TouchableOpacity
       style={ styles.container }
@@ -40,4 +34,4 @@ const VideoListItem = ({item, onVideoSelect}) => {
   )
 }
 
-export default VideoListItem;
+export default ListItemCard;

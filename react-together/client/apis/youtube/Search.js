@@ -1,35 +1,11 @@
-'use strict';
+import {GOOGLE_API_KEY} from 'react-native-dotenv'
+export default class Api {
+  static search(query) {
+    let url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=20&q=${query}&key=${GOOGLE_API_KEY}`;
 
-const {google} = require('googleapis');
-const APIClient = require('./APIClient');
-
-// initialize the Youtube API library
-const youtube = google.youtube({
-  version: 'v3',
-  auth: APIClient.oAuth2Client
-});
-
-// a very simple example of searching for youtube videos
-function runSamples () {
-  youtube.search.list({
-    part: 'id,snippet',
-    q: 'Node.js on Google Cloud'
-  }, (err, data) => {
-    if (err) {
-      throw err;
-    }
-    console.log(data);
-    process.exit();
-  });
-}
-
-const scopes = [
-  'https://www.googleapis.com/auth/youtube'
-];
-
-APIClient.authenticate(scopes, err => {
-  if (err) {
-    throw err;
+    return fetch(url)
+    .then(response => response.json())
+    .then(json     => json)
+    .catch(error   => console.warn(error));
   }
-  runSamples();
-});
+}

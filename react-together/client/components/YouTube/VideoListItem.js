@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {   Image, View, Text, TouchableOpacity, } from 'react-native';
+var moment = require('moment');
 import styles from './styles/VideoListItem.style.js'
 
 const VideoListItem = ({item, onVideoSelect}) => {
@@ -14,10 +15,14 @@ const VideoListItem = ({item, onVideoSelect}) => {
           source={ {uri: item.snippet.thumbnails.high.url} } />
 
         <View style={ styles.videoContainer }>
-          <View style={ styles.videoIconChannelContainer }>
+          {/* Need to add an API that retrieves channel icons */}
+          {/* <View style={ styles.videoIconChannelContainer }>
             <View style={ styles.videoIconChannel }>
+                <Image
+              style={ styles.videoIconChannel }
+              source={ {uri: item.snippet.thumbnails.high.url} } />
             </View>
-          </View>
+          </View> */}
 
           <View style={ styles.videoTextContainer }>
             <Text style={ styles.videoTitle }>
@@ -25,7 +30,9 @@ const VideoListItem = ({item, onVideoSelect}) => {
             </Text>
             <Text style={ styles.videoDescription }>
               { ((item.snippet.channelTitle).length > 30) ? (((item.snippet.channelTitle).substring(0, 30 - 3)) + '...') : item.snippet.channelTitle }
-              - { item.snippet.publishedAt } ago
+            </Text>
+            <Text style={ styles.videoDescription }>
+              { moment(item.snippet.publishedAt).fromNow() }
             </Text>
           </View>
         </View>

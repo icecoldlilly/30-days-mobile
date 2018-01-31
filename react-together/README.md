@@ -16,10 +16,11 @@ A react app that allows you to watch videos (YouTube) together
     ~~- [native-base](<https://github.com/GeekyAnts/NativeBase>)~~
     - [react-native-dotenv](<https://github.com/zetachang/react-native-dotenv>)
 - YouTube
-    - [react-native-youtube](<https://github.com/inProgress-team/react-native-youtube>)
-    - [google-auth-library, googleapis](https://github.com/google/google-api-nodejs-client/tree/master/samples/youtube)
+    - [react-native-youtube-clone](<https://github.com/JohnProg/react-native-youtube-clone/>)
 - Messenger
     - [react-native-gifted-chat](<https://github.com/FaridSafi/react-native-gifted-chat>)
+- Utilities
+    - Time formatting: [moment.js](<https://github.com/moment/moment/>)
 - Host Server
     - [Firebase](https://firebase.google.com)
     - [react-native-firebase](<https://github.com/invertase/react-native-firebase>)
@@ -60,6 +61,7 @@ A react app that allows you to watch videos (YouTube) together
         - ~~Scaffold video list item~~
     - Make YouTubeScreen handle delegation between video list and player
         - ~~Insert list UI and search bar into YouTubeScreen~~
+            - Fixed [time formatting](<https://medium.com/@andreecy/date-format-using-momentjs-locale-in-react-native-cc6dcffc85d3>) using 'moment.js'
         - ~~Build Modal navigation from VideoListUI to PlayerUI~~
         - Accept params from YouTubeScreen when Navigating to PlayerUI
     - **Styling Note**

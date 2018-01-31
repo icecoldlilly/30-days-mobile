@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
      flex: 4,
      marginLeft: -10,
      paddingTop: 5,
+     paddingLeft: 10,
    },
    videoTitle: {
      fontSize: 16,

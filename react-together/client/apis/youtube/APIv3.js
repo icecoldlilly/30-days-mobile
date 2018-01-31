@@ -8,4 +8,12 @@ export default class Api {
     .then(json     => json)
     .catch(error   => console.warn(error));
   }
+  static featured() {
+    let url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=20&q=${query}&key=${GOOGLE_API_KEY}`;
+
+    return fetch(url)
+    .then(response => response.json())
+    .then(json     => json)
+    .catch(error   => console.warn(error));
+  }
 }

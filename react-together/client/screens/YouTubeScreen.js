@@ -5,7 +5,7 @@ import { Button } from 'react-native-elements';
 import PlayerUI from '../components/YouTube/PlayerUI';
 import VideoListUI from '../components/YouTube/VideoListUI';
 import SearchBar from '../components/common/SearchBar';
-import Api       from '../apis/youtube/Search'
+import Api       from '../apis/youtube/APIv3'
 // TODO: ✍🏽 
 /* 1. Have a search bar with YouTube featured  videos in squares under
    2.✅ Once video is clicked on, PlayerUI is opened with the WatchTogether at the bottom */

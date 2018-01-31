@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import MessageUI from '../components/Chat/MessageUI'
+import MessageUI from '../components/Messenger/MessageUI'
 
 export default class MessengerScreen extends Component {
   static navigationOptions = ({navigation}) => ({

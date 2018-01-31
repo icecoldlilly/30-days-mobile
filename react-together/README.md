@@ -55,7 +55,11 @@ A react app that allows you to watch videos (YouTube) together
 ## Day 4
 
 1. Complete scaffolding YouTube Component
-    - Scaffold a video list component
+    - ~~Scaffold a video list component~~
+        - ~~Scaffold common Search Bar~~
+        - ~~Scaffold video list item~~
     - Make YouTubeScreen handle delegation between video list and player
+        - ~~Insert list UI and search bar into YouTubeScreen~~
+        - Build Modal navigation from VideoListUI to PlayerUI
 2. Scaffold Authentication Screen
 3. Scaffold Settings Screen

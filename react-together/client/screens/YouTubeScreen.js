@@ -5,8 +5,13 @@ import PlayerUI from '../components/YouTube/PlayerUI';
 import VideoListUI from '../components/YouTube/VideoListUI';
 import SearchBar from '../components/common/SearchBar';
 import Api       from '../apis/youtube/Search'
-
+// TODO: ✍🏽 
+/* 1. Have a search bar with YouTube featured  videos in squares under
+   2. Once video is clicked on, PlayerUI is opened with the WatchTogether at the bottom */
 export default class YouTubeScreen extends Component {
+  static navigationOptions = {
+    title: 'YouTube',
+  };
   constructor(props) {
     super(props);
 
@@ -17,7 +22,7 @@ export default class YouTubeScreen extends Component {
     this.state = {
       loading: false,
       videos: dataSource,
-      selectedVideo: ''
+      // selectedVideo: ''
     };
   }
 
@@ -27,22 +32,27 @@ export default class YouTubeScreen extends Component {
 
   render() {
     const { videos } = this.state;
-
+    const { goBack } = this.props.navigation;
+    const { navigate } = this.props.navigation;
     return (
       <View style={ styles.container }>
 
         <SearchBar onSubmit={this._searchData.bind(this)}/>
 
-        <PlayerUI video={this.state.selectedVideo} loading={this.state.loading}/>
+        {/* <PlayerUI video={this.state.selectedVideo} loading={this.state.loading}/> */}
 
         <VideoListUI
           style={ styles.videoList }
           items={ this.state.videos }
           onVideoSelect={ selectedVideo => {
-            this.setState({selectedVideo});
+            // Don't select re-set state
+            // this.setState({selectedVideo});
+            // ** Modal ** Navigate instead
+            console.log(`Navigating to ${this.state.selectedVideo.snippet.title}`)
+            navigate(PlayerUI(`${this.state.selectedVideo}`, `${this.state.loading}`))
           } }
         />
-
+        {/* TODO: ✍🏽 Add a loader element */}
         {/* <Loader visible={this.state.loading} /> */}
 
       </View>

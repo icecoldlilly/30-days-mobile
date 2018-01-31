@@ -6,7 +6,7 @@ import { Button, Icon } from 'react-native-elements';
 // import YouTube from 'react-native-youtube';
 
 /* 
-  TODO: ✍🏽 Add video player here
+  TODO: ✍🏽 Fix UI to match
    */
 
 export default class PlayerUI extends Component {

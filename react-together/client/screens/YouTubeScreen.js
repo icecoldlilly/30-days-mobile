@@ -8,7 +8,7 @@ import SearchBar from '../components/common/SearchBar';
 import Api       from '../apis/youtube/Search'
 // TODO: ✍🏽 
 /* 1. Have a search bar with YouTube featured  videos in squares under
-   2. Once video is clicked on, PlayerUI is opened with the WatchTogether at the bottom */
+   2.✅ Once video is clicked on, PlayerUI is opened with the WatchTogether at the bottom */
 export class YouTubeScreen extends Component {
   static navigationOptions = {
     title: 'YouTube',
@@ -37,13 +37,19 @@ export class YouTubeScreen extends Component {
     const { navigate } = this.props.navigation;
     return (
       <View style={ styles.container }>
+      {/* // <View style={ {flex: 1} }> */}
 
-        <SearchBar onSubmit={this._searchData.bind(this)}/>
+        <SearchBar 
+          style={styles.searchBar}
+          // style={{flex: 1}}
+          onSubmit={this._searchData.bind(this)}
+        />
 
         {/* <PlayerUI video={this.state.selectedVideo} loading={this.state.loading}/> */}
 
         <VideoListUI
           style={ styles.videoList }
+          // style={ {flex: 5} }
           items={ this.state.videos }
           onVideoSelect={
             selectedVideo => {
@@ -111,7 +117,11 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   videoList: {
+    flex:5,
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  searchBar: {
+
   }
 });

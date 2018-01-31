@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, ListView } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 import { Button } from 'react-native-elements';
 import PlayerUI from '../components/YouTube/PlayerUI';
 import VideoListUI from '../components/YouTube/VideoListUI';
@@ -8,7 +9,7 @@ import Api       from '../apis/youtube/Search'
 // TODO: ✍🏽 
 /* 1. Have a search bar with YouTube featured  videos in squares under
    2. Once video is clicked on, PlayerUI is opened with the WatchTogether at the bottom */
-export default class YouTubeScreen extends Component {
+export class YouTubeScreen extends Component {
   static navigationOptions = {
     title: 'YouTube',
   };
@@ -44,13 +45,18 @@ export default class YouTubeScreen extends Component {
         <VideoListUI
           style={ styles.videoList }
           items={ this.state.videos }
-          onVideoSelect={ selectedVideo => {
-            // Don't select re-set state
-            // this.setState({selectedVideo});
-            // ** Modal ** Navigate instead
-            console.log(`Navigating to ${this.state.selectedVideo.snippet.title}`)
-            navigate(PlayerUI(`${this.state.selectedVideo}`, `${this.state.loading}`))
-          } }
+          onVideoSelect={
+            selectedVideo => {
+              // Don't select re-set state
+              // this.setState({selectedVideo});
+              // ** Modal ** Navigate instead
+              console.log(`Navigating to ${this.state.selectedVideo.snippet.title}`)
+              navigate('PlayerUI',{
+                video: this.state.selectedVideo,
+                loading: this.state.loading
+              })
+            } 
+          }
         />
         {/* TODO: ✍🏽 Add a loader element */}
         {/* <Loader visible={this.state.loading} /> */}
@@ -87,10 +93,10 @@ export default class YouTubeScreen extends Component {
 //     );
 //   }
 // }
-const MainModalNavigator = StackNavigator(
+export default YouTubeNavigator = StackNavigator(
   {
-    MainScreen: { screen: YouTubeScreen },
-    PlayerScreen: { screen: PlayerUI },
+    YouTubeScreen: { screen: YouTubeScreen },
+    PlayerUI: { screen: PlayerUI },
   },
   {
     mode: 'modal',

@@ -7,18 +7,76 @@ import SearchBar from '../components/common/SearchBar';
 import Api       from '../apis/youtube/Search'
 
 export default class YouTubeScreen extends Component {
-  static navigationOptions = {
-    title: 'YouTube',
-  };
+  constructor(props) {
+    super(props);
+
+    const dataSource = new ListView.DataSource({
+      rowHasChanged: (r1, r2) => r1 !== r2,
+    });
+
+    this.state = {
+      loading: false,
+      videos: dataSource,
+      selectedVideo: ''
+    };
+  }
+
+  componentDidMount() {
+    this._searchData.call(this, 'React Native');
+  }
+
   render() {
-    const { goBack } = this.props.navigation;
+    const { videos } = this.state;
+
     return (
-      <View style={styles.container}>
-        <PlayerUI playThis="KVZ-P-ZI6W4"/>
+      <View style={ styles.container }>
+
+        <SearchBar onSubmit={this._searchData.bind(this)}/>
+
+        <VideoDetail video={this.state.selectedVideo} loading={this.state.loading}/>
+
+        <VideoList
+          style={ styles.videoList }
+          items={ this.state.videos }
+          onVideoSelect={ selectedVideo => {
+            this.setState({selectedVideo});
+          } }
+        />
+
+        <Loader visible={this.state.loading} />
+
       </View>
-    );
+    )
+  }
+
+  _searchData(query) {
+    this.setState({loading: true});
+
+    Api.search(query)
+    .then(data => {
+      this.setState({
+        videos: this.state.videos.cloneWithRows(data.items),
+        selectedVideo: data.items[0],
+        loading: false
+      });
+    });
   }
 }
+
+
+// export default class YouTubeScreen extends Component {
+//   static navigationOptions = {
+//     title: 'YouTube',
+//   };
+//   render() {
+//     const { goBack } = this.props.navigation;
+//     return (
+//       <View style={styles.container}>
+//         <PlayerUI playThis="KVZ-P-ZI6W4"/>
+//       </View>
+//     );
+//   }
+// }
 
 
 const styles = StyleSheet.create({

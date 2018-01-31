@@ -87,7 +87,16 @@ export default class YouTubeScreen extends Component {
 //     );
 //   }
 // }
-
+const MainModalNavigator = StackNavigator(
+  {
+    MainScreen: { screen: YouTubeScreen },
+    PlayerScreen: { screen: PlayerUI },
+  },
+  {
+    mode: 'modal',
+    headerMode: 'none',
+  },
+);
 
 const styles = StyleSheet.create({
   container: {

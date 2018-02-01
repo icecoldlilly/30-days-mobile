@@ -79,6 +79,6 @@ A react app that allows you to watch videos (YouTube) together
         - Video is being controlled by `Host`
         - Regular press does nothing
         - (Optional) Long press sends and alert saying: `Switch video please` to Host
-2. Scaffold Authentication Screen
-3. Scaffold Settings Screen
+2. ~~Scaffold Authentication Screen~~
+3. ~~Scaffold Settings Screen~~
     - Country Picker will appear here for YouTube featured choices

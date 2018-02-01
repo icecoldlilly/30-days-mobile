@@ -82,3 +82,6 @@ A react app that allows you to watch videos (YouTube) together
 2. ~~Scaffold Authentication Screen~~
 3. ~~Scaffold Settings Screen~~
     - Country Picker will appear here for YouTube featured choices
+4. ~~Reorganize navigation stack structure~~
+    - ~~Encapsulate navigation relating to main screen into MainScreenNavigator~~
+    - ~~Use App.js to strictly navigate between AuthScreen and MainScreenNavigator~~

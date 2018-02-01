@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import { Button, Icon } from 'react-native-elements';
 import "@expo/vector-icons"; // 6.2.2
 export default class MainScreen extends Component {
-  static ChatIcon = <Icon name="fa-commenting-o" type="font-awesome" />
-  static navigationOptions = {
+  static navigationOptions = ({navigation}) => ({
     title: 'Together',
     // This removes back button title
     headerBackTitle: null,
-  };
+    headerRight: <Icon style={{marginRight: 3}} name="cog" color="black" type="font-awesome" onPress={() => navigation.navigate('Settings')}/>
+  });
   render() {
     const { navigate } = this.props.navigation;
     return (

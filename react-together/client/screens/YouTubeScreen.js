@@ -27,7 +27,6 @@ export class YouTubeScreen extends Component {
   }
 
   componentDidMount() {
-    // this._searchData.call(this, 'Nipsey Hussle');
     this._showFeatured.call(this);
   }
 
@@ -46,9 +45,6 @@ export class YouTubeScreen extends Component {
         />
       </View>
       <View style={{ flex: 5}}>
-
-        {/* <PlayerUI video={this.state.selectedVideo} loading={this.state.loading}/> */}
-
         <VideoListUI
           style={ styles.videoList }
           items={ this.state.videos }
@@ -76,7 +72,7 @@ export class YouTubeScreen extends Component {
 
     Api.featured()
     .then(data => {
-      console.log(data)
+      console.log(JSON.stringify(data))
       this.setState({
         videos: this.state.videos.cloneWithRows(data.items),
         loading: false
@@ -88,6 +84,7 @@ export class YouTubeScreen extends Component {
 
     Api.search(query)
     .then(data => {
+      console.log(JSON.stringify(data))
       this.setState({
         videos: this.state.videos.cloneWithRows(data.items),
         loading: false

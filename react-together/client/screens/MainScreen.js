@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
+import { StackNavigator } from 'react-navigation';
 import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import { Button, Icon } from 'react-native-elements';
+import MessengerScreen from './MessengerScreen';
+import SettingsScreen  from './SettingsScreen';
+import YouTubeNavigator  from './YouTubeScreen';
 import "@expo/vector-icons"; // 6.2.2
-export default class MainScreen extends Component {
+export class MainScreen extends Component {
   static navigationOptions = ({navigation}) => ({
     title: 'Together',
     // This removes back button title
@@ -31,6 +35,20 @@ export default class MainScreen extends Component {
     );
   }
 }
+export default MainScreenNavigator = StackNavigator(
+  {
+    Main: {screen: MainScreen},
+    Messneger: {screen: MessengerScreen},
+    Settings: {screen: SettingsScreen},
+    // Replaced YouTubeScreen with YouTube navigator to have YouTube be a modular component
+    YouTube: {screen: YouTubeNavigator},
+  },
+  {
+    // mode: 'modal',
+    // headerMode: 'none',
+  },
+);
+
 
 const styles = StyleSheet.create({
   container: {

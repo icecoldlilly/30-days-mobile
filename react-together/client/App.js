@@ -7,12 +7,15 @@ import AuthScreen  from './screens/AuthScreen';
 import YouTubeNavigator  from './screens/YouTubeScreen';
 
 export const AppNavigator = StackNavigator({
-  Main: {screen: MainScreen},
-  Messneger: {screen: MessengerScreen},
-  Settings: {screen: SettingsScreen},
-  // Replaced YouTubeScreen with YouTube navigator to have YouTube be a modular component
-  YouTube: {screen: YouTubeNavigator},
-});
+  Main: {screen: MainScreenNavigator},
+  Auth: {screen: AuthScreen},
+},
+{
+  // Hides away the double header occuring due to redirection to MainScreenNavigator
+  headerMode: 'none',
+}
+  
+);
 
 export default class App extends Component {
   render() {

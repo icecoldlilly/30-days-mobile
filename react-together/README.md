@@ -68,5 +68,17 @@ A react app that allows you to watch videos (YouTube) together
         1. Place components inside viewports (<View>)
         2. Set flex ratio based on desired size (bigger component has higher number, i.e 'flex:5' and 'flex:1')
         3. Make sure there's no 'justifyContent' or 'alignItems' set for the viewports
+
+## Day 5
+
+1. Add Video Sync through WebSockets
+    - First user to click `Watch Together` => Button turns Green and text changes to `Host`
+        - Video is being sync'd from them
+        - Long press switches the control to the other user
+    - Second user to click `Watch Together` => Button turns Blue and text changes to `Guest`
+        - Video is being controlled by `Host`
+        - Regular press does nothing
+        - (Optional) Long press sends and alert saying: `Switch video please` to Host
 2. Scaffold Authentication Screen
 3. Scaffold Settings Screen
+    - Country Picker will appear here for YouTube featured choices

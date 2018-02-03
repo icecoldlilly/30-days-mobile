@@ -47,7 +47,13 @@ export default class PlayerUI extends Component {
                   style={ styles.WebViewContainer }
                   javaScriptEnabled={true}
                   domStorageEnabled={true}
-                  source={{uri: `https://www.youtube.com/embed/${this.state.video.id.videoId}` }}
+                  mixedContentMode ={"always"}
+                  source={{
+                    uri: `https://www.youtube.com/embed/${this.state.video.id.videoId}?enablejsapi=1`,
+                    headers: {
+                      'Referer': 'https://www.youtube.com/',
+                    }
+                }}
           />
         </View>
         <Button style={{ marginTop: '10%' }}

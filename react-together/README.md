@@ -28,24 +28,25 @@ A react app that allows you to watch videos (YouTube) together
     - [react-pubnub](<https://github.com/pubnub/react>)
 
 ## Day 1
+### Building base and choosing UI kit
 
 1.  ~~Setup base~~
 2.  ~~Add simple buttons~~
 3.  ~~Choose React Native UI Kit~~
 
 ## Day 2
-
-1. ~~Add Chat Component~~
+### Scaffolding basic components
+1. ~~Scaffold basic chat component~~
 2. ~~Style button components~~
     - Faced a [problem](<https://github.com/react-native-training/react-native-elements/issues/868>) with icons in buttons
-3. Add YouTube Component
+3. ~~Scaffold basic YouTube component~~
     - ~~Add YouTube API~~
-        - Borrowed Node.js implementation for google-auth-library, googleapis
+        - 🛑 (Changed later) ~~Borrowed Node.js implementation for google-auth-library, googleapis~~ 
 
 ## Day 3
-
-1. ~~Refactor Screens into Components~~
-2. Created Messenger components: Contacts & Message
+### Working on components and introduction to 12-factors methodology
+1. ~~Refactor smaller parts of Screens into Components~~
+2. ~~Created Messenger components: Contacts & Message~~
         - ~~Scaffold a simple Message component using Gifted-Chat~~
         - ~~Pass data as props to Message component from screen~~
         - Scaffold a contact list component
@@ -54,7 +55,7 @@ A react app that allows you to watch videos (YouTube) together
         - ~~Pass data as props to YouTube player component from screen~~
 4. Added API keys into .env using 'react-native-dotenv'
 ## Day 4
-
+### Finished scaffolding a rough draft of YouTube screen
 1. Complete scaffolding YouTube Component
     - ~~Scaffold a video list component~~
         - ~~Scaffold common Search Bar~~
@@ -70,7 +71,18 @@ A react app that allows you to watch videos (YouTube) together
         3. Make sure there's no 'justifyContent' or 'alignItems' set for the viewports
 
 ## Day 5
+### Refactored navigation stack & scaffolded more basic screens
+1. ~~Scaffold Authentication Screen~~
+2. ~~Scaffold Settings Screen~~
+    - Country Picker will appear here for YouTube featured choices
+3. ~~Reorganize navigation stack structure~~
+    - ~~Encapsulate navigation relating to main screen into MainScreenNavigator~~
+    - ~~Use App.js to strictly navigate between AuthScreen and MainScreenNavigator~~
+4. Fixed YouTube player
 
+
+## Day 6
+### Intro to WebSockets
 1. Add Video Sync through WebSockets
     - First user to click `Watch Together` => Button turns Green and text changes to `Host`
         - Video is being sync'd from them
@@ -79,9 +91,3 @@ A react app that allows you to watch videos (YouTube) together
         - Video is being controlled by `Host`
         - Regular press does nothing
         - (Optional) Long press sends and alert saying: `Switch video please` to Host
-2. ~~Scaffold Authentication Screen~~
-3. ~~Scaffold Settings Screen~~
-    - Country Picker will appear here for YouTube featured choices
-4. ~~Reorganize navigation stack structure~~
-    - ~~Encapsulate navigation relating to main screen into MainScreenNavigator~~
-    - ~~Use App.js to strictly navigate between AuthScreen and MainScreenNavigator~~

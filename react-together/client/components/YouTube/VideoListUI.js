@@ -6,7 +6,10 @@ import { StyleSheet, Text, View, ListView } from 'react-native';
    */
   import VideoListItem from './VideoListItem'; 
   const VideoListUI = ({items, onVideoSelect}) => {
-     renderRow = (video, sId, rId) => {
+    resetScroll = () => {
+      this.ref.scrollTo({y: 0})
+    };
+    renderRow = (video, sId, rId) => {
        return (
          <VideoListItem
            key={ rId }
@@ -15,11 +18,12 @@ import { StyleSheet, Text, View, ListView } from 'react-native';
          />
        );
      };
-  
-     return (
-       <ListView dataSource={ items }
-         style={{flex: 4}}
-         renderRow={ this.renderRow } />
+    return (
+       <ListView 
+        ref={ref => this.listView = ref}
+        dataSource={ items }
+        style={{flex: 4}}
+        renderRow={ this.renderRow } />
      )
    }
   

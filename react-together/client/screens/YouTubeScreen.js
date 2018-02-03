@@ -81,7 +81,7 @@ export class YouTubeScreen extends Component {
   }
   _searchData(query) {
     this.setState({loading: true});
-
+    
     Api.search(query)
     .then(data => {
       console.log(JSON.stringify(data))

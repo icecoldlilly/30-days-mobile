@@ -1,10 +1,4 @@
-// VideoSync is an API that synchronizes the playback of embedded 
-// YouTube videos across multiples browsers.
-// 
-// You can check out the demo right [here](http://larrywu.com/videosync/), or
-// view the source on [Github](https://github.com/lw7360/videosync/)
-
-
+import {PN_PUB_KEY,PN_SUB_KEY} from 'react-native-dotenv'
 // Setup
 // ---
 // roomId is the name of the channel you want to use.

@@ -51,6 +51,7 @@ export default class PlayerUI extends Component {
                   source={{
                     uri: `https://www.youtube.com/embed/${this.state.video.id.videoId}?enablejsapi=1`,
                     headers: {
+                      // This will allow playback of restricted videos
                       'Referer': 'https://www.youtube.com/',
                     }
                 }}

@@ -1,4 +1,4 @@
-import {PN_PUB_KEY,PN_SUB_KEY} from 'react-native-dotenv'
+import { PN_PUB_KEY, PN_SUB_KEY, PN_SEC_KEY } from 'react-native-dotenv'
 // Setup
 // ---
 // roomId is the name of the channel you want to use.
@@ -14,8 +14,8 @@ function VideoSync(roomId, userId) {
 
   // Initializing PubNub with demo keys and our userId.
   var pubnub = PUBNUB.init({
-      publish_key: 'pub-c-242fbbf1-4cc6-4153-8f20-a671697f15ec',
-      subscribe_key: 'sub-c-2361676c-1e85-11e4-bbbf-02ee2ddab7fe',
+      publish_key: PN_PUB_KEY,
+      subscribe_key: PN_SUB_KEY,
       uuid: userId
   });
 

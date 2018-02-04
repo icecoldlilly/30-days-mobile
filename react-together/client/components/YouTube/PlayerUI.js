@@ -68,10 +68,8 @@ export default class PlayerUI extends Component {
     return (
       // Use WebView
       <View style={styles.container}>
-        <View style={{ height: 300 }} >
-          <VideoPlayer videoId={this.state.video.id.videoId} loading={this.state.loading} />
-        </View>
-        <Button style={{ marginTop: '10%' }}
+          <VideoPlayer style={{ height: 300 }} videoId={this.state.video.id.videoId} loading={this.state.loading} />
+        <Button style={{ marginTop: '0%' }}
         large
         text='Watch Together'
         icon={ <Icon name="plus-square" color="white" type="font-awesome" /> }
@@ -85,13 +83,5 @@ export default class PlayerUI extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  WebViewContainer: {
-    marginTop: (Platform.OS == 'ios') ? 0 : 0, 
-  },
-  indicator: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 3,
   },
 });

@@ -71,7 +71,7 @@ A react app that allows you to watch videos (YouTube) together
         3. Make sure there's no 'justifyContent' or 'alignItems' set for the viewports
 
 ## Day 5
-### Refactored navigation stack & scaffolded more basic screens
+### Modularity of components
 1. ~~Scaffold Authentication Screen~~
 2. ~~Scaffold Settings Screen~~
     - Country Picker will appear here for YouTube featured choices

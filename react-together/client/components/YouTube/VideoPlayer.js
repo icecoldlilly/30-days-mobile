@@ -3,7 +3,10 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, WebView, Platform, ActivityIndicator } from 'react-native';
 import { Button, Icon } from 'react-native-elements';
 
-
+const injectedScript = () => {
+  window.postMessage(document.body.innerHTML);
+  window.postMessage = window.originalPostMessage || window.postMessage;
+}
 export default class VideoPlayer extends Component {
   constructor(props) {
     super(props);
@@ -23,9 +26,13 @@ export default class VideoPlayer extends Component {
     console.log("Will receive props");
   }
 
+
   WebViewPlayer() {
     return (
       <WebView
+        ref={webview => this.webview = webview}
+        injectedJavaScript={`(${String(injectedScript)})()`}
+        onMessage={message => console.log(message)}
         javaScriptEnabled={true}
         domStorageEnabled={true}
         decelerationRate={"normal"}

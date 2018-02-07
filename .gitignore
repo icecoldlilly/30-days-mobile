@@ -4,6 +4,7 @@
 # dependencies
 **/node_modules/
 **/.lock
+**/.vscode
 
 # misc
 **/.env
@@ -18,3 +19,6 @@
 **/yarn-debug.log*
 **/yarn-error.log*
 **/*.lock
+**/android
+**/ios
+**/package-lock.json

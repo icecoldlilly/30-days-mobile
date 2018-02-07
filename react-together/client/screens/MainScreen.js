@@ -5,7 +5,6 @@ import { Button, Icon } from 'react-native-elements';
 import MessengerScreen from './MessengerScreen';
 import SettingsScreen  from './SettingsScreen';
 import YouTubeNavigator  from './YouTubeScreen';
-import "@expo/vector-icons"; // 6.2.2
 export class MainScreen extends Component {
   static navigationOptions = ({navigation}) => ({
     title: 'Together',
@@ -19,15 +18,15 @@ export class MainScreen extends Component {
       <View style={styles.container}>
         <Button 
         large
-        text={'Messenger'}
-        icon={ <Icon name="commenting-o" color="white" type="font-awesome" /> }
+        title={'Messenger'}
+        // icon={ <Icon name="commenting-o" color="white" type="font-awesome" /> }
         buttonStyle={{backgroundColor: '#0083ff', borderRadius: 10}}
         textStyle={{textAlign: 'center'}}
         onPress={() => navigate('Messneger')} />
         <Button
         large
-        text='YouTube'
-        icon={ <Icon name="youtube-play" color="white" type="font-awesome" /> }
+        title={'YouTube'}
+        // icon={ <Icon name="youtube-play" color="white" type="font-awesome" /> }
         buttonStyle={{backgroundColor: 'red', borderRadius: 10}}
         textStyle={{textAlign: 'center'}}
         onPress={() => navigate('YouTube')} />

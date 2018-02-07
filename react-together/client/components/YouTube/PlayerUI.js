@@ -71,7 +71,7 @@ export default class PlayerUI extends Component {
           <VideoPlayer style={{ height: 300 }} videoId={this.state.video.id.videoId} loading={this.state.loading} />
         <Button style={{ marginTop: '0%' }}
         large
-        text='Watch Together'
+        title='Watch Together'
         icon={ <Icon name="plus-square" color="white" type="font-awesome" /> }
         buttonStyle={{backgroundColor: '#fc8027', borderRadius: 10}}
         textStyle={{textAlign: 'center'}}

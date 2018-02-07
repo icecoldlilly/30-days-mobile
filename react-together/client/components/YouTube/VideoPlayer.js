@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, WebView, Platform, ActivityIndicator } from 'react-native';
 import { Button, Icon } from 'react-native-elements';
 
+// implemented following solution to onMessage problem:
+// https://github.com/facebook/react-native/issues/10865#issuecomment-358248948
 const injectedScript = () => {
   window.postMessage(document.body.innerHTML);
   window.postMessage = window.originalPostMessage || window.postMessage;

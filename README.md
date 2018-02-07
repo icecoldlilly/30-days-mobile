@@ -7,4 +7,5 @@ A 30 day challanege Mainly concentrated on React Native apps.
 - [Day 3 -- React together / Scaffolding basic YouTube client](react-together/README.md#day-3)
 - [Day 4 -- React together / Finish basic YouTube client and scaffold auth & settings](react-together/README.md#day-4)
 - [Day 5 -- React together / Modularity of components](react-together/README.md#day-5)
-- [Day 6 -- React together / Intro to WebSockets](react-together/README.md#day-6)
+- [Day 6 -- React together / ~~Intro to WebSockets~~ Can't get 2-way comm w/ WebView](react-together/README.md#day-6)
+- [Day 7 -- React together / Eject from CRNA (Expo)]

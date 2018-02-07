@@ -78,11 +78,11 @@ A react app that allows you to watch videos (YouTube) together
 3. ~~Reorganize navigation stack structure~~
     - ~~Encapsulate navigation relating to main screen into MainScreenNavigator~~
     - ~~Use App.js to strictly navigate between AuthScreen and MainScreenNavigator~~
-4. Fixed YouTube player
+4. ~~Fixed YouTube player~~ Still need to be able to have 2-way communication with player 💔
 
 
 ## Day 6
-### Intro to WebSockets
+### Intro to WebSockets - Delayed
 1. Add Video Sync through WebSockets
     - First user to click `Watch Together` => Button turns Green and text changes to `Host`
         - Video is being sync'd from them
@@ -91,3 +91,15 @@ A react app that allows you to watch videos (YouTube) together
         - Video is being controlled by `Host`
         - Regular press does nothing
         - (Optional) Long press sends and alert saying: `Switch video please` to Host
+
+## Day 7
+### Ejection
+1. Eject project to vanilla React-Native 
+    - Performance sucks
+    - Simulation sucks &rightarrow; no more QR codes for testing
+2. Install React-Native-YouTube
+    - Too many steps to get working
+3. Time to find new framework
+    -   NativeScripts
+    -   IF NOT &rightarrow; go native (Swift, Kotlin)
+4. Removed messenger option from screen; Project ended due to limitations of ExpoKit and inefficieny of React

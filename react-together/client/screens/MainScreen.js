@@ -16,13 +16,13 @@ export class MainScreen extends Component {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-        <Button 
+        {/* <Button 
         large
         title={'Messenger'}
         // icon={ <Icon name="commenting-o" color="white" type="font-awesome" /> }
         buttonStyle={{backgroundColor: '#0083ff', borderRadius: 10}}
         textStyle={{textAlign: 'center'}}
-        onPress={() => navigate('Messneger')} />
+        onPress={() => navigate('Messneger')} /> */}
         <Button
         large
         title={'YouTube'}

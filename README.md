@@ -12,4 +12,8 @@ A 30 day challanege Mainly concentrated on React Native apps.
 - [Day 7 (Last Day) -- React together / Eject from CRNA (Expo)](react-together/README.md#day-7)
 
 ## NativeScript
+<<<<<<< HEAD
 - [Day 1 -- Messenger -- An attempt at building a fully fledged messenger using Swift]
+=======
+- [Day 1 -- NS Messenger -- An attempt at building a fully fledged messenger using NativeScript]
+>>>>>>> 08c5a48c5b1a4494cc8e2a57452337f870793c15

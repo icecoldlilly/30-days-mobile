@@ -100,6 +100,10 @@ A react app that allows you to watch videos (YouTube) together
 2. Install React-Native-YouTube
     - Too many steps to get working
 3. Time to find new framework
+<<<<<<< HEAD
     -   ~~NativeScripts~~ Gave up on it since it's still being tested 💔
+=======
+    -   NativeScripts
+>>>>>>> 08c5a48c5b1a4494cc8e2a57452337f870793c15
     -   IF NOT &rightarrow; go native (Swift, Kotlin)
 4. Removed messenger option from screen; Project ended due to limitations of ExpoKit and inefficieny of React

@@ -56,6 +56,39 @@ class StoriesVC: UIViewController, SFSafariViewControllerDelegate,UITableViewDat
         super.init(coder: coder)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configUI()
+        retrieveStories()
+        
+        //Constructing tableView.
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.rowHeight = 50
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: PostCellIdentifier)
+        
+        self.tableView.frame = CGRect(x:0,y:10, width:self.view.frame.width,height:self.view.frame.height - 40);
+        self.view.addSubview(self.tableView)
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    func configUI(){
+        refreshControl.addTarget(self, action: #selector(StoriesVC.retrieveStories ), for: .valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: PullToRefreshString)
+        tableView.insertSubview(refreshControl, at: 0)
+        
+        // Have to initialize this UILabel here because the view does not exist in init() yet.
+        errorMessageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+        errorMessageLabel.textColor = ErrorMessageLabelTextColor
+        errorMessageLabel.textAlignment = .center
+        errorMessageLabel.font = UIFont.systemFont(ofSize: ErrorMessageFontSize)
+    }
+
+    
     // These methods will be passed later to StoryUtils
     @objc func retrieveStories() {
         if retrievingStories! {
@@ -109,47 +142,16 @@ class StoriesVC: UIViewController, SFSafariViewControllerDelegate,UITableViewDat
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configUI()
-        retrieveStories()
-        
-        //Constructing tableView.
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.rowHeight = 50
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: PostCellIdentifier)
-        
-        self.tableView.frame = CGRect(x:0,y:10, width:self.view.frame.width,height:self.view.frame.height - 40);
-        self.view.addSubview(self.tableView)
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    func configUI(){
-        refreshControl.addTarget(self, action: #selector(StoriesVC.retrieveStories ), for: .valueChanged)
-        refreshControl.attributedTitle = NSAttributedString(string: PullToRefreshString)
-        tableView.insertSubview(refreshControl, at: 0)
-        
-        // Have to initialize this UILabel here because the view does not exist in init() yet.
-        errorMessageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
-        errorMessageLabel.textColor = ErrorMessageLabelTextColor
-        errorMessageLabel.textAlignment = .center
-        errorMessageLabel.font = UIFont.systemFont(ofSize: ErrorMessageFontSize)
-    }
-    
     func showErrorMessage(_ message: String) {
         errorMessageLabel.text = message
         self.tableView.backgroundView = errorMessageLabel
         self.tableView.separatorStyle = .none
     }
 // MARK: UITableViewDataSource
-
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "News"
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stories.count
     }

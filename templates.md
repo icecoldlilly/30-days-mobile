@@ -15,3 +15,6 @@
             -   [ ] Desktop: <https://github.com/WhisperSystems/Signal-Desktop>
 -   [ ] GiftedChat
     -   [ ] React Native: <https://github.com/FaridSafi/react-native-gifted-chat>
+-   [ ] Hacker News
+    -   [ ] https://github.com/amitburst/HackerNews
+-  

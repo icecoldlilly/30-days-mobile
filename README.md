@@ -11,5 +11,5 @@ A 30 day challanege Mainly concentrated on React Native apps.
 - [Day 6 -- React together / ~~Intro to WebSockets~~ Can't get 2-way comm w/ WebView](react-together/README.md#day-6)
 - [Day 7 (Last Day) -- React together / Eject from CRNA (Expo)](react-together/README.md#day-7)
 
-## NativeScript
-- [Day 1 -- Messenger -- An attempt at building a fully fledged messenger using Swift]
+## Swift
+- [Day 1 -- HN Client -- An attempt at building a demo HN client w/ desired featuresusing Swift]

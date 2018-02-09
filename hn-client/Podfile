@@ -1,0 +1,10 @@
+use_frameworks!
+
+platform :ios, '11.0'
+target 'HN-Client' do
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
+  pod 'PromiseKit/CorePromise', '~> 4.5'
+  pod 'SnapKit', '~> 4.0.0'
+  pod 'Firebase', '2.5.1'
+end

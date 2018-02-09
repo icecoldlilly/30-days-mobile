@@ -1,6 +1,6 @@
 Inspired by [HNBuddy](http://hnbuddy.io)
 1. Prefetch comments when fetching thread
-2. Upvote / Comment / Star / Bookmark from outside
+2. Upvote / Downvote / Comment / Star / Bookmark from outside
 3. Support bookmarks
 4. Support Pocket
 5. Allow different sorting

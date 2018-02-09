@@ -22,4 +22,5 @@ What's going to be built:
 - Basic setup done
 - Installed Cocoapods
 - Scaffolded basic screens
+  - [Table View](http://swiftythings.com/2017/07/01/uitables-programmatically-in-swift-4/)
 - Scaffolded Tab View Controller

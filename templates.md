@@ -16,5 +16,6 @@
 -   [ ] GiftedChat
     -   [ ] React Native: <https://github.com/FaridSafi/react-native-gifted-chat>
 -   [ ] Hacker News
-    -   [ ] https://github.com/amitburst/HackerNews
+    -   [ ] [Basic](https://github.com/amitburst/HackerNews)
+    -   [ ] [Upgraded](https://github.com/omaralbeik/HNClient)
 -  

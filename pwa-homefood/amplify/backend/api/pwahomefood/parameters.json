@@ -1,0 +1,13 @@
+{
+    "AppSyncApiName": "pwahomefood",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authcognitoffa3ede4",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "schemaGraphql": "s3://pwahomefood-20190108105124-deployment/amplify-appsync-files/schema.graphql.1546938231303",
+    "ResolverBucket": "pwahomefood-20190108105124-deployment",
+    "ResolverRootKey": "amplify-appsync-files",
+    "DeploymentTimestamp": "1546938231303"
+}

@@ -1,0 +1,9 @@
+{
+    "bucketName": "pwahomefoodbfb350b25bb0440080dffa6fddf05a59",
+    "authPolicyName": "s3_amplify_9149f5e9",
+    "unauthPolicyName": "s3_amplify_9149f5e9",
+    "authRoleName": "pwahomefood-20190108105124-authRole",
+    "unauthRoleName": "pwahomefood-20190108105124-unauthRole",
+    "authPermissions": "rw",
+    "unauthPermissions": ""
+}

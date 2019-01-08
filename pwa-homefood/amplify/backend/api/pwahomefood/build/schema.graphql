@@ -1,0 +1,256 @@
+type Cook {
+  id: ID!
+  name: String!
+  rating: Float
+  about: String
+  dishes(filter: ModelDishFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelDishConnection
+}
+
+type Dish {
+  id: ID!
+  title: String!
+  cook: Cook
+  reviews(filter: ModelReviewFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelReviewConnection
+}
+
+type Review {
+  id: ID!
+  customer: Customer
+  content: String
+  dish: Dish
+}
+
+type Customer {
+  id: ID!
+  name: String!
+  rating: Float
+  reviews(filter: ModelReviewFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelReviewConnection
+  about: String
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelCookConnection {
+  items: [Cook]
+  nextToken: String
+}
+
+input ModelStringFilterInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+}
+
+input ModelIDFilterInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+}
+
+input ModelIntFilterInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  contains: Int
+  notContains: Int
+  between: [Int]
+}
+
+input ModelFloatFilterInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  contains: Float
+  notContains: Float
+  between: [Float]
+}
+
+input ModelBooleanFilterInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelCookFilterInput {
+  id: ModelIDFilterInput
+  name: ModelStringFilterInput
+  rating: ModelFloatFilterInput
+  about: ModelStringFilterInput
+  and: [ModelCookFilterInput]
+  or: [ModelCookFilterInput]
+  not: ModelCookFilterInput
+}
+
+type Query {
+  getCook(id: ID!): Cook
+  listCooks(filter: ModelCookFilterInput, limit: Int, nextToken: String): ModelCookConnection
+  getDish(id: ID!): Dish
+  listDishs(filter: ModelDishFilterInput, limit: Int, nextToken: String): ModelDishConnection
+  getReview(id: ID!): Review
+  listReviews(filter: ModelReviewFilterInput, limit: Int, nextToken: String): ModelReviewConnection
+  getCustomer(id: ID!): Customer
+  listCustomers(filter: ModelCustomerFilterInput, limit: Int, nextToken: String): ModelCustomerConnection
+}
+
+input CreateCookInput {
+  id: ID
+  name: String!
+  rating: Float
+  about: String
+}
+
+input UpdateCookInput {
+  id: ID!
+  name: String
+  rating: Float
+  about: String
+}
+
+input DeleteCookInput {
+  id: ID
+}
+
+type Mutation {
+  createCook(input: CreateCookInput!): Cook
+  updateCook(input: UpdateCookInput!): Cook
+  deleteCook(input: DeleteCookInput!): Cook
+  createDish(input: CreateDishInput!): Dish
+  updateDish(input: UpdateDishInput!): Dish
+  deleteDish(input: DeleteDishInput!): Dish
+  createReview(input: CreateReviewInput!): Review
+  updateReview(input: UpdateReviewInput!): Review
+  deleteReview(input: DeleteReviewInput!): Review
+  createCustomer(input: CreateCustomerInput!): Customer
+  updateCustomer(input: UpdateCustomerInput!): Customer
+  deleteCustomer(input: DeleteCustomerInput!): Customer
+}
+
+type Subscription {
+  onCreateCook: Cook @aws_subscribe(mutations: ["createCook"])
+  onUpdateCook: Cook @aws_subscribe(mutations: ["updateCook"])
+  onDeleteCook: Cook @aws_subscribe(mutations: ["deleteCook"])
+  onCreateDish: Dish @aws_subscribe(mutations: ["createDish"])
+  onUpdateDish: Dish @aws_subscribe(mutations: ["updateDish"])
+  onDeleteDish: Dish @aws_subscribe(mutations: ["deleteDish"])
+  onCreateReview: Review @aws_subscribe(mutations: ["createReview"])
+  onUpdateReview: Review @aws_subscribe(mutations: ["updateReview"])
+  onDeleteReview: Review @aws_subscribe(mutations: ["deleteReview"])
+  onCreateCustomer: Customer @aws_subscribe(mutations: ["createCustomer"])
+  onUpdateCustomer: Customer @aws_subscribe(mutations: ["updateCustomer"])
+  onDeleteCustomer: Customer @aws_subscribe(mutations: ["deleteCustomer"])
+}
+
+type ModelDishConnection {
+  items: [Dish]
+  nextToken: String
+}
+
+input ModelDishFilterInput {
+  id: ModelIDFilterInput
+  title: ModelStringFilterInput
+  and: [ModelDishFilterInput]
+  or: [ModelDishFilterInput]
+  not: ModelDishFilterInput
+}
+
+input CreateDishInput {
+  id: ID
+  title: String!
+  dishCookId: ID
+}
+
+input UpdateDishInput {
+  id: ID!
+  title: String
+  dishCookId: ID
+}
+
+input DeleteDishInput {
+  id: ID
+}
+
+type ModelReviewConnection {
+  items: [Review]
+  nextToken: String
+}
+
+input ModelReviewFilterInput {
+  id: ModelIDFilterInput
+  content: ModelStringFilterInput
+  and: [ModelReviewFilterInput]
+  or: [ModelReviewFilterInput]
+  not: ModelReviewFilterInput
+}
+
+input CreateReviewInput {
+  id: ID
+  content: String
+  reviewCustomerId: ID
+  reviewDishId: ID
+}
+
+input UpdateReviewInput {
+  id: ID!
+  content: String
+  reviewCustomerId: ID
+  reviewDishId: ID
+}
+
+input DeleteReviewInput {
+  id: ID
+}
+
+type ModelCustomerConnection {
+  items: [Customer]
+  nextToken: String
+}
+
+input ModelCustomerFilterInput {
+  id: ModelIDFilterInput
+  name: ModelStringFilterInput
+  rating: ModelFloatFilterInput
+  about: ModelStringFilterInput
+  and: [ModelCustomerFilterInput]
+  or: [ModelCustomerFilterInput]
+  not: ModelCustomerFilterInput
+}
+
+input CreateCustomerInput {
+  id: ID
+  name: String!
+  rating: Float
+  about: String
+}
+
+input UpdateCustomerInput {
+  id: ID!
+  name: String
+  rating: Float
+  about: String
+}
+
+input DeleteCustomerInput {
+  id: ID
+}

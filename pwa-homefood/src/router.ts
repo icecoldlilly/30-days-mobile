@@ -1,8 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import { AmplifyPlugin } from 'aws-amplify-vue';
+import * as AmplifyModules from 'aws-amplify';
 
 
 Vue.use(Router);
+Vue.use(AmplifyPlugin, AmplifyModules);
 
 export default new Router({
   mode: 'history',
@@ -19,6 +22,18 @@ export default new Router({
       name: 'about',
       meta: {layout: 'default'},
       component: () => import('@/pages/About.vue'),
+    },
+    {
+      path: '/auth',
+      name: 'login',
+      meta: {layout: 'auth'},
+      component: () => import('@/pages/auth/Login.vue'),
+    },
+    {
+      path: '/auth/signup',
+      name: 'signup',
+      meta: {layout: 'auth'},
+      component: () => import('@/pages/auth/SignUp.vue'),
     },
   ],
 });

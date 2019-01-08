@@ -1,0 +1,72 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "pwahomefood-20190108105124-authRole",
+			"UnauthRoleArn": "arn:aws:iam::820197733865:role/pwahomefood-20190108105124-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::820197733865:role/pwahomefood-20190108105124-authRole",
+			"Region": "eu-west-1",
+			"DeploymentBucketName": "pwahomefood-20190108105124-deployment",
+			"UnauthRoleName": "pwahomefood-20190108105124-unauthRole",
+			"StackName": "pwahomefood-20190108105124",
+			"StackId": "arn:aws:cloudformation:eu-west-1:820197733865:stack/pwahomefood-20190108105124/956ee780-1322-11e9-be35-06eb0c990f0a"
+		}
+	},
+	"auth": {
+		"cognitoffa3ede4": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/pwahomefood-20190108105124-deployment/amplify-cfn-templates/auth/cognitoffa3ede4-cloudformation-template.yml",
+				"logicalId": "authcognitoffa3ede4"
+			},
+			"lastPushTimeStamp": "2019-01-08T09:08:04.889Z",
+			"output": {
+				"AppClientSecret": "1fi5vuvfa0hiikssfb0plii8oac4c3q5pitrstsdi76np8l5vage",
+				"UserPoolId": "eu-west-1_5VO3kupyo",
+				"AppClientIDWeb": "1o9r83bmmhmi00pce62h4l7il2",
+				"AppClientID": "7mc21n6ls9h6t28rekj397evq0",
+				"IdentityPoolId": "eu-west-1:f418e9e8-06fa-4571-905d-53ff17e64ce7",
+				"IdentityPoolName": "cognitoffa3ede4_identitypool_ffa3ede4",
+				"UserPoolName": "cognitoffa3ede4_userpool_ffa3ede4"
+			},
+			"lastPushDirHash": "sGPKjGz5EU9bZg/VX8R8Hnk2Yws="
+		}
+	},
+	"storage": {
+		"pwabucket": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/pwahomefood-20190108105124-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+				"logicalId": "storagepwabucket"
+			},
+			"lastPushTimeStamp": "2019-01-08T09:08:04.889Z",
+			"output": {
+				"BucketName": "pwahomefoodbfb350b25bb0440080dffa6fddf05a59",
+				"Region": "eu-west-1"
+			},
+			"lastPushDirHash": "InFIuAZWxmfZvcslpzV6kB9N4iA="
+		}
+	},
+	"api": {
+		"pwahomefood": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"securityType": "AMAZON_COGNITO_USER_POOLS",
+				"GraphQLAPIIdOutput": "malfng46qvcpjjncaew4oj7lm4",
+				"GraphQLAPIEndpointOutput": "https://7ofl2vitt5eetaheo2o7y2bxxa.appsync-api.eu-west-1.amazonaws.com/graphql",
+				"GraphQLAPIKeyOutput": "da2-mml2pwvrljcqfpnna3amnoyb3q",
+				"AuthCognitoUserPoolIdOutput": "eu-west-1_5VO3kupyo",
+				"AuthCognitoUserPoolNativeClientId": "See UserPool: eu-west-1_5VO3kupyo",
+				"AuthCognitoUserPoolJSClientId": "See UserPool: eu-west-1_5VO3kupyo"
+			},
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/pwahomefood-20190108105124-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"logicalId": "apipwahomefood"
+			},
+			"lastPushTimeStamp": "2019-01-08T09:08:04.889Z",
+			"lastPushDirHash": "xczYiioEVCTg9s1zixvM8wfltS8="
+		}
+	}
+}

@@ -5,9 +5,7 @@
 </template>
 
 <script>
-// import { components } from 'aws-amplify-vue'
-
-
+import { components } from 'aws-amplify-vue';
 export default {
   name: 'App',
   computed: {
@@ -15,8 +13,8 @@ export default {
       return (this.$route.meta.layout || "app") + '-layout';
     }
   },
-  // components: {
-  //   ...components
-  // }
+  components: {
+    ...components
+  }
 }
 </script>

@@ -1,0 +1,26 @@
+type Cook @model {
+  id: ID!
+  name: String!
+  rating: Float
+  about: String
+  dishes: [Dish] @connection(name: "CooksDishes")
+}
+type Dish @model {
+  id: ID!
+  title: String!
+  cook: Cook @connection(name: "CooksDishes")
+  reviews: [Review] @connection(name: "DishReviews")
+}
+type Review @model {
+  id: ID!
+  customer: Customer @connection(name: "CustomerReviews")
+  content: String
+  dish: Dish @connection(name: "DishReviews")
+}
+type Customer @model {
+  id: ID!
+  name: String!
+  rating: Float
+  reviews: [Review] @connection(name: "CustomerReviews")
+  about: String
+}

@@ -1,29 +1,6 @@
-# pwa-saas-template
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# TODO: 
+## Front end
+1. Use Vue plugins all over the interface.
+2. Ensure authentication before page access.
+3. Route log out function.
+4. Mock data?

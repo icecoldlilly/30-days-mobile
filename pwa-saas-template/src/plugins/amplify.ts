@@ -8,7 +8,8 @@ Amplify.configure(aws_exports);
 
 
 
-import { AmplifyPlugin } from 'aws-amplify-vue';
+import { AmplifyPlugin, AmplifyEventBus } from 'aws-amplify-vue';
 import * as AmplifyModules from 'aws-amplify';
 
 Vue.use(AmplifyPlugin, AmplifyModules);
+Vue.use(AmplifyEventBus);

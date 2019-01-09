@@ -1,9 +1,9 @@
 import Vue from 'vue';
-import './plugins/vuetify';
-import './plugins/amplify';
 import App from './App.vue';
 import router from './router';
-import './registerServiceWorker';
+import '@/registerServiceWorker';
+import '@/plugins/vuetify';
+import '@/plugins/amplify';
 
 import DefaultLayout from '@/layouts/DefaultLayout.vue'; // @ is an alias to /src
 import AppLayout from '@/layouts/AppLayout.vue'; // @ is an alias to /src

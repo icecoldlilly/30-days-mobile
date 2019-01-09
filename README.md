@@ -12,7 +12,8 @@ A 30 day challanege Mainly concentrated on React Native apps.
 - [Day 7 (Last Day) -- React together / Eject from CRNA (Expo)](react-together/README.md#day-7)
 
 ## Swift
-- [Day 1 -- HN Client -- An attempt at building a demo HN client w/ desired featuresusing Swift]
+- [Day 8 -- HN Client -- An attempt at building a demo HN client w/ desired featuresusing Swift]
 
 ## PWAs
-- [Day 1 -- Initial setup of a Vue-based PWA]
+- [Day 9 -- Initial setup of a Vue-based PWA]
+- [Day 10 -- Setup of AWS Cognito login with the project]

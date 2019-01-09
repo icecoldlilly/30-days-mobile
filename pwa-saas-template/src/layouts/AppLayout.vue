@@ -7,7 +7,7 @@
       <v-spacer></v-spacer>
       <v-btn
         flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        href="https://github.com/hilalh/30-days-mobile/"
         target="_blank"
       >
       Fork <i><font-awesome-icon icon="code-branch" style="margin: 2px;"/> </i>

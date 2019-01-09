@@ -12,12 +12,12 @@
       >
       Fork <i><font-awesome-icon icon="code-branch" style="margin: 2px;"/> </i>
       </v-btn>
-      <v-btn v-if="isSignedIn">
+      <v-btn v-if="isSignedIn" router-link to="/auth/logout">
         <span class="mr-2">
           Log Out <i> <font-awesome-icon icon="sign-out-alt" style="margin: 2px;"/> </i>
         </span>
       </v-btn>
-      <v-btn v-else>
+      <v-btn v-else router-link to="/auth/">
         <span class="mr-2">
             Sign In <i><font-awesome-icon icon="sign-in-alt" style="margin: 2px;" /></i>
         </span>

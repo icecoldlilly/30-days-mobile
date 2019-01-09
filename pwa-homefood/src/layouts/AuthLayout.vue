@@ -1,5 +1,5 @@
 <template>
-  <div class="auth">
+  <v-app>
     <v-container>
       <v-layout text-xs-center wrap>
         <v-flex xs12 mb-5>
@@ -9,7 +9,7 @@
             class="my-3"
             contain
             height="200"
-          ></v-img>
+          />
           </v-layout>
           <v-layout justify-center>
             <slot />
@@ -17,7 +17,7 @@
         </v-flex>
       </v-layout>
     </v-container>
-  </div>
+  </v-app>
 </template>
 <script lang="ts">
   export default {

@@ -1,6 +1,6 @@
 {
-  "name": "pwa-homefood",
-  "short_name": "pwa-homefood",
+  "name": "pwa-saas-template",
+  "short_name": "pwa-saas-template",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",

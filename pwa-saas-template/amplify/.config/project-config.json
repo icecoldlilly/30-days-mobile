@@ -1,6 +1,6 @@
 {
     "projectName": "pwahomefood",
-    "projectPath": "/Users/hilal/Git/30-days-mobile/pwa-homefood",
+    "projectPath": "/Users/hilal/Git/30-days-mobile/pwa-saas-template",
     "defaultEditor": "code",
     "frontendHandler": {
         "javascript": "/Users/hilal/n/lib/node_modules/@aws-amplify/cli/node_modules/amplify-frontend-javascript"

@@ -1,4 +1,4 @@
-# pwa-homefood
+# pwa-saas-template
 
 ## Project setup
 ```
